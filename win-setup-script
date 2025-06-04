@@ -1,0 +1,9 @@
+# Enable file extensions
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "HideFileExt" -Value 0
+
+# Disable OneDrive startup
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "OneDrive" /f
+
+# Install Notepad++ and 7zip
+winget install --id Notepad++.Notepad++ --silent
+winget install --id 7zip.7zip --silent
